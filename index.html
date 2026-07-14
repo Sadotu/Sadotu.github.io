@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <title>Nick de Kok — Sadotu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root{
+      --bg:#0b0d12; --bg2:#11141b; --card:#161a23; --card-border:#242a37;
+    --text:#e8ecf3; --muted:#9aa4b8; --accent:#7c9fff; --accent2:#59e0c0;
+          --tag-bg:#1d2432;
+}
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:'Segoe UI',Roboto,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 24px;}
+
+  header.hero{
+    padding:100px 0 90px;
+    background:
+          radial-gradient(circle at 15% 20%, rgba(124,159,255,0.18), transparent 45%),
+                  radial-gradient(circle at 85% 10%, rgba(89,224,192,0.14), transparent 40%),
+                  var(--bg2);
+    border-bottom:1px solid var(--card-border);
+  }
+  .eyebrow{
+        display:inline-block;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;
+    color:var(--accent2);border:1px solid rgba(89,224,192,0.35);padding:6px 14px;border-radius:999px;
+    margin-bottom:22px;background:rgba(89,224,192,0.06);
+  }
+  h1{font-size:48px;margin:0 0 18px;font-weight:700;letter-spacing:-1px;}
+  h1 span{background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .lede{font-size:19px;color:var(--muted);max-width:620px;margin:0 0 34px;}
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap;}
+  .btn{padding:12px 22px;border-radius:10px;font-weight:600;font-size:15px;display:inline-block;}
+  .btn-primary{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#0b0d12;}
+  .btn-secondary{border:1px solid var(--card-border);color:var(--text);}
+  .btn-primary:hover{opacity:0.9;}
+  .btn-secondary:hover{border-color:var(--accent);}
+
+  section{padding:70px 0;}
+  section.alt{background:var(--bg2);border-top:1px solid var(--card-border);border-bottom:1px solid var(--card-border);}
+  h2{font-size:30px;margin:0 0 12px;letter-spacing:-0.5px;}
+  .section-sub{color:var(--muted);max-width:640px;margin:0 0 44px;font-size:16px;}
+
+  .about-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:50px;align-items:start;}
+  .about-grid p{color:var(--muted);font-size:16px;margin:0 0 16px;}
+  .focus-list{list-style:none;padding:0;margin:0;display:grid;gap:16px;}
+  .focus-list li{background:var(--card);border:1px solid var(--card-border);border-radius:12px;padding:16px 18px;}
+  .focus-list b{color:var(--text);}
+  .focus-list span{display:block;color:var(--muted);font-size:14px;margin-top:4px;}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;}
+  .card{
+    background:var(--card);border:1px solid var(--card-border);border-radius:14px;padding:26px;
+    display:flex;flex-direction:column;gap:12px;transition:transform .15s ease, border-color .15s ease;
+  }
+  .card:hover{transform:translateY(-4px);border-color:var(--accent);}
+  .card h3{margin:0;font-size:19px;}
+  .card p{margin:0;color:var(--muted);font-size:14.5px;flex-grow:1;}
+
+  .stack-wrap{display:flex;flex-wrap:wrap;gap:10px;}
+  .stack-tag{background:var(--tag-bg);border:1px solid var(--card-border);padding:8px 16px;border-radius:999px;font-size:14px;color:var(--text);}
+
+  footer{padding:50px 0;text-align:center;color:var(--muted);font-size:14px;border-top:1px solid var(--card-border);}
+  footer a{color:var(--accent);font-weight:600;}
+
+  @media (max-width:800px){
+    .about-grid{grid-template-columns:1fr;}
+    h1{font-size:36px;}
+      }
+</style>
+      </head>
+      <body>
+
+      <header class="hero">
+        <div class="wrap">
+          <span class="eyebrow">Sadotu · Nick de Kok</span>
+    <h1>Building <span>AI-native developer tooling</span><br>and shipping real products</h1>
+          <p class="lede">I work across two areas: building secure, AI-agent-driven developer workflows, and designing full-stack applications from backend to frontend.</p>
+        <div class="cta-row">
+            <a class="btn btn-primary" href="https://github.com/Sadotu" target="_blank">Visit my GitHub profile</a>
+          </div>
+        </div>
+      </header>
+
+      <section>
+        <div class="wrap about-grid">
+          <div>
+            <h2>What I'm focused on</h2>
+            <p>My recent work spans two main areas: improving how AI coding agents operate safely and efficiently, and building complete web applications end to end.</p>
+            <p>On the tooling side, I build the infrastructure that lets coding agents work autonomously in isolated, secure environments, including sandboxed containers, scoped authentication, and reusable skill definitions that carry over between projects and agents. On the product side, I design and maintain full-stack applications, handling everything from user interfaces to backend services, data, and deployment.</p>
+          </div>
+          <ul class="focus-list">
+            <li><b>Agent infrastructure</b><span>Secure, sandboxed environments and scoped credentials so agents can work independently and safely.</span></li>
+            <li><b>Cross-repo workflows</b><span>Tools that let information, tasks, and ideas move between repositories without breaking focus.</span></li>
+            <li><b>Full-stack products</b><span>Complete applications shipped to real users, with automated testing and deployment pipelines.</span></li>
+            <li><b>Portable AI skills</b><span>Reusable skill and workflow definitions that work across different AI coding assistants.</span></li>
+    </ul>
+        </div>
+      </section>
+
+      <section class="alt">
+        <div class="wrap">
+          <h2>How my work breaks down</h2>
+    <p class="section-sub">Rather than a repo-by-repo list, here's a general picture of the kinds of projects I spend my time on.</p>
+          <div class="grid">
+            <div class="card">
+              <h3>AI Agent Tooling</h3>
+        <p>Secure, sandboxed environments and reusable skills that let AI coding agents work independently, without ever touching host credentials.</p>
+            </div>
+            <div class="card">
+              <h3>Full-Stack Web Apps</h3>
+        <p>Complete products built end to end, from backend services and databases to the interfaces people actually use.</p>
+            </div>
+            <div class="card">
+              <h3>Automation & Workflows</h3>
+              <p>Tools that streamline everyday development tasks, like moving work items and context across projects and repositories.</p>
+            </div>
+            <div class="card">
+              <h3>Hobby & Learning Projects</h3>
+              <p>Smaller, self-directed experiments where I pick up new frameworks, languages, and ideas just to see how they work.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <h2>Toolkit</h2>
+          <p class="section-sub">Languages and platforms across recent work.</p>
+          <div class="stack-wrap">
+            <span class="stack-tag">Python</span>
+            <span class="stack-tag">TypeScript / Next.js</span>
+            <span class="stack-tag">Java / Spring Boot</span>
+            <span class="stack-tag">Kotlin</span>
+            <span class="stack-tag">Shell</span>
+            <span class="stack-tag">JavaScript</span>
+            <span class="stack-tag">Docker / Devcontainers</span>
+            <span class="stack-tag">Claude Code & Codex</span>
+            <span class="stack-tag">Supabase</span>
+            <span class="stack-tag">GitHub Actions</span>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div class="wrap">
+          <p>Nick de Kok — <a href="https://github.com/Sadotu" target="_blank">github.com/Sadotu</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
